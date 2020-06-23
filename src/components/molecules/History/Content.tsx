@@ -2,7 +2,12 @@ import React, { Fragment } from 'react';
 import { View } from '@react-pdf/renderer';
 import Text from 'components/atoms/Text';
 
-const Content = (props) => (
+type propsType = {
+  abouts: string[];
+  contents: string[];
+};
+
+const Content = (props: propsType) => (
   <Fragment>
     <Text size="small" blod>
       【業務内容】

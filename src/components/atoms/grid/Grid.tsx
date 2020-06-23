@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { StyleSheet, View } from '@react-pdf/renderer';
 
-export default (props) => {
+type propsType = {
+  subTitle: string;
+  borderLeft: number;
+  borderRight: number;
+  borderTop: number;
+  borderBottom: number;
+  children: ReactNode;
+  style: {};
+};
+
+const Grid = (props: propsType) => {
   const styles = StyleSheet.create({
     grid: {
       flexDirection: 'row',
@@ -15,3 +25,4 @@ export default (props) => {
 
   return <View style={styles.grid}>{props.children}</View>;
 };
+export default Grid;

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { StyleSheet, View } from '@react-pdf/renderer';
 
-export default (props) => {
+type propsType = {
+  size: number;
+  subTitle: string;
+  borderLeft: number;
+  borderRight: number;
+  borderTop: number;
+  borderBottom: number;
+  children: ReactNode;
+  style: {};
+};
+
+const Col = (props: propsType) => {
   const styles = StyleSheet.create({
     col: {
       padding: 3,
@@ -17,3 +28,4 @@ export default (props) => {
 
   return <View style={styles.col}> {props.children}</View>;
 };
+export default Col;

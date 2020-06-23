@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Text, StyleSheet } from '@react-pdf/renderer';
 
 type propsType = {
-  style: {};
+  style?: {};
   size: string;
   blod?: boolean;
   children: ReactNode;
